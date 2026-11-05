@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Gaurav Gavali - Software Developer, Web & App Developer, and SaaS Builder crafting high-performance digital solutions.">
+  <meta name="keywords" content="Gaurav Gavali, Software Developer, Full Stack Engineer, Web Developer, App Developer, SaaS Builder, React, Next.js, Node.js">
+  <meta name="author" content="Gaurav Gavali">
+  <meta name="theme-color" content="#0a0a0f">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gaurav Gavali — Software & SaaS Developer">
+  <meta property="og:description" content="Portfolio of Gaurav Gavali. Explore innovative web apps, mobile solutions, and scalable cloud SaaS products.">
+
+  <title>Gaurav Gavali | Software Developer & SaaS Architect</title>
+
+  <!-- Google Fonts: Space Grotesk (Headings) & Inter (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        <span class="preloader-letters">GG</span>
+        <div class="preloader-ring"></div>
+        <div class="preloader-ring-outer"></div>
+      </div>
+      <div class="preloader-bar">
+        <div class="preloader-fill"></div>
+      </div>
+      <span class="preloader-text">INITIALIZING SYSTEM...</span>
+    </div>
+  </div>
+
+  <!-- Custom Glow Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Gaurav Gavali Home">
+        <span class="logo-box">GG</span>
+        <span class="logo-name">Gaurav<span class="logo-accent">.dev</span></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+          <li class="nav-item"><a href="#work" class="nav-link">Work</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav CTA & Mobile Toggle -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-outline nav-cta">
+          <span>Let's Talk</span>
+          <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="7" y1="17" x2="17" y2="7"></line>
+            <polyline points="7 7 17 7 17 17"></polyline>
+          </svg>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Wrapper -->
+  <main>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+      <!-- Interactive Particle Canvas Background -->
+      <canvas id="particleCanvas" class="hero-canvas"></canvas>
+
+      <!-- Ambient Glowing Orbs -->
+      <div class="glow-orb orb-purple"></div>
+      <div class="glow-orb orb-blue"></div>
+      <div class="glow-orb orb-cyan"></div>
+
+      <!-- Floating Geometric Shapes in Background -->
+      <div class="floating-shape shape-triangle"></div>
+      <div class="floating-shape shape-circle"></div>
+      <div class="floating-shape shape-square"></div>
+      <div class="floating-shape shape-code">&lt;/&gt;</div>
+      <div class="floating-shape shape-bracket">{ }</div>
+
+      <div class="container hero-container">
+        <div class="hero-content">
+          <!-- Availability Pill -->
+          <div class="hero-badge reveal">
+            <span class="badge-status-dot"></span>
+            <span class="badge-text">Available for SaaS &amp; Full-Stack Projects</span>
+          </div>
+
+          <!-- Animated Greeting & Name -->
+          <h1 class="hero-title reveal">
+            <span class="greeting-prefix">Hi, I'm</span>
+            <span class="gradient-text gradient-glow">Gaurav Gavali</span>
+          </h1>
+
+          <!-- Typewriter Role Subtitle -->
+          <div class="hero-role reveal">
+            <span class="role-static">Passionate</span>
+            <span class="typewriter-container">
+              <span class="typewriter" id="typewriter"></span>
+              <span class="typewriter-cursor">|</span>
+            </span>
+          </div>
+
+          <!-- Hero Bio Description -->
+          <p class="hero-description reveal">
+            Specializing in building high-performance web applications, cross-platform mobile apps, and scalable cloud SaaS architectures. Transforming complex problems into intuitive, elegant digital realities.
+          </p>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group reveal">
+            <a href="#work" class="btn btn-primary">
+              <span>View My Work</span>
+              <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+              </svg>
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+              <span>Let's Talk</span>
+              <svg class="btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Quick Social Links -->
+          <div class="hero-socials reveal">
+            <span class="socials-label">Connect:</span>
+            <a href="https://github.com/gaurav4047" class="social-icon-link" aria-label="GitHub Profile" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/gaurav-gavali-57470233a" class="social-icon-link" aria-label="LinkedIn Profile" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/GauravGavali07" class="social-icon-link" aria-label="Twitter / X Profile" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator with Bounce -->
+      <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About section">
+        <span class="scroll-mouse">
+          <span class="scroll-wheel"></span>
+        </span>
+        <span class="scroll-arrow">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </span>
+      </a>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-badge">ABOUT ME</div>
+          <h2 class="section-title">Architecting Ideas into <span class="gradient-text">Scalable Solutions</span></h2>
+          <p class="section-subtitle">A blend of deep engineering discipline and obsessive attention to user experience.</p>
+        </div>
+
+        <!-- About Main Content Card -->
+        <div class="about-card-wrapper reveal">
+          <div class="about-card glassmorphism-card">
+            <!-- Left: Stylized Avatar & Visual Display -->
+            <div class="about-visual">
+              <div class="avatar-container">
+                <div class="avatar-ring-animated"></div>
+                <div class="avatar-circle">
+                  <span class="avatar-initials">GG</span>
+                </div>
+                <!-- Floating Tech Badges -->
+                <div class="floating-badge badge-top-right">
+                  <span class="badge-icon">⚡</span>
+                  <span class="badge-label">Fast Execution</span>
+                </div>
+                <div class="floating-badge badge-bottom-left">
+                  <span class="badge-icon">🛡️</span>
+                  <span class="badge-label">Clean Code</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Bio Information -->
+            <div class="about-info">
+              <h3 class="about-name">Gaurav Gavali</h3>
+              <p class="about-tagline">Full-Stack Engineer &amp; SaaS Product Builder</p>
+
+              <p class="about-text">
+                Hello! I am a full-stack developer dedicated to engineering modern web applications, high-performance mobile experiences, and resilient cloud infrastructures. With half a decade of hands-on coding experience, I bridge the gap between complex software architecture and effortless, fluid user experiences.
+              </p>
+
+              <p class="about-text">
+                My approach combines strong fundamentals in TypeScript and modern frameworks with cloud-native architectures. Whether I am architecting a multi-tenant SaaS product, building lightning-fast APIs, or creating pixel-perfect micro-animations, I prioritize code quality, maintainability, and end-user delight.
+              </p>
+
+              <!-- Core Highlights Grid -->
+              <div class="about-highlights">
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>Modern Frameworks</strong>
+                    <span>React, Next.js, Vue, Node</span>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>Cloud &amp; DevOps</strong>
+                    <span>AWS, Docker, CI/CD, Supabase</span>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>Mobile Ecosystems</strong>
+                    <span>React Native &amp; Flutter</span>
+                  </div>
+                </div>
+
+                <div class="highlight-item">
+                  <div class="highlight-icon">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <polyline points="20 6 9 17 4 12"></polyline>
+                    </svg>
+                  </div>
+                  <div>
+                    <strong>SaaS Architecture</strong>
+                    <span>Stripe Billing, Auth &amp; Scale</span>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Animated Stats Counter Row -->
+        <div class="stats-row reveal">
+          <div class="stat-card glassmorphism-card">
+            <div class="stat-number-wrapper">
+              <span class="stat-counter" data-target="5">0</span><span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Years of Experience</div>
+            <div class="stat-subtext">Continuous learning &amp; development</div>
+          </div>
+
+          <div class="stat-card glassmorphism-card">
+            <div class="stat-number-wrapper">
+              <span class="stat-counter" data-target="50">0</span><span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Completed Projects</div>
+            <div class="stat-subtext">Web, mobile &amp; backend systems</div>
+          </div>
+
+          <div class="stat-card glassmorphism-card">
+            <div class="stat-number-wrapper">
+              <span class="stat-counter" data-target="20">0</span><span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Happy Clients</div>
+            <div class="stat-subtext">Across international markets</div>
+          </div>
+
+          <div class="stat-card glassmorphism-card">
+            <div class="stat-number-wrapper">
+              <span class="stat-counter" data-target="10">0</span><span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">SaaS Products</div>
+            <div class="stat-subtext">Architected and deployed</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section class="section services-section" id="services">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-badge">WHAT I DO</div>
+          <h2 class="section-title">Specialized <span class="gradient-text">Engineering Services</span></h2>
+          <p class="section-subtitle">Delivering high-value, performant, and secure solutions tailored to your business roadmap.</p>
+        </div>
+
+        <!-- 6 Service Cards Grid -->
+        <div class="services-grid reveal">
+          <!-- Service 1: Web Development -->
+          <div class="service-card glassmorphism-card" data-tilt>
+            <div class="service-card-number">01</div>
+            <div class="service-icon-box">
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Web Development</h3>
+            <p class="service-description">
+              Custom responsive web applications, single-page apps, and high-converting marketing portals engineered with React, Next.js, and TypeScript.
+            </p>
+            <ul class="service-features">
+              <li>Server-Side Rendering (SSR) &amp; Static Generation</li>
+              <li>Pixel-perfect responsive fluid design</li>
+              <li>SEO optimized &amp; accessible (a11y)</li>
+            </ul>
+          </div>
+
+          <!-- Service 2: App Development -->
+          <div class="service-card glassmorphism-card" data-tilt>
+            <div class="service-card-number">02</div>
+            <div class="service-icon-box">
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                <line x1="12" y1="18" x2="12.01" y2="18"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">App Development</h3>
+            <p class="service-description">
+              High-performance iOS and Android applications developed with React Native and Flutter, ensuring native fluid gestures and offline capability.
+            </p>
+            <ul class="service-features">
+              <li>Cross-platform unified codebases</li>
+              <li>Smooth 60fps gesture animations</li>
+              <li>App Store &amp; Play Store release workflows</li>
+            </ul>
+          </div>
+
+          <!-- Service 3: SaaS Development -->
+          <div class="service-card glassmorphism-card" data-tilt>
+            <div class="service-card-number">03</div>
+            <div class="service-icon-box">
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">SaaS Development</h3>
+            <p class="service-description">
+              Architecting full-scale Software as a Service products from scratch. Multi-tenancy, recurring billing, role-based access, and onboarding flows.
+            </p>
+            <ul class="service-features">
+              <li>Stripe customer billing &amp; webhooks</li>
+              <li>Multi-tenant database schema design</li>
+              <li>Automated user onboarding &amp; metrics</li>
+            </ul>
+          </div>
+
+          <!-- Service 4: UI/UX Design -->
+          <div class="service-card glassmorphism-card" data-tilt>
+            <div class="service-card-number">04</div>
+            <div class="service-icon-box">
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="13.5" cy="6.5" r=".5"></circle>
+                <circle cx="17.5" cy="10.5" r=".5"></circle>
+                <circle cx="8.5" cy="7.5" r=".5"></circle>
+                <circle cx="6.5" cy="12.5" r=".5"></circle>
+                <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">UI/UX Design</h3>
+            <p class="service-description">
+              Creating intuitive, visually striking digital interfaces. From wireframes and Figma prototypes to component design systems with modern aesthetics.
+            </p>
+            <ul class="service-features">
+              <li>Design tokens &amp; comprehensive design systems</li>
+              <li>Micro-interactions &amp; seamless transitions</li>
+              <li>User journey mapping &amp; UX optimization</li>
+            </ul>
+          </div>
+
+          <!-- Service 5: API Development -->
+          <div class="service-card glassmorphism-card" data-tilt>
+            <div class="service-card-number">05</div>
+            <div class="service-icon-box">
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="4 17 10 11 4 5"></polyline>
+                <line x1="12" y1="19" x2="20" y2="19"></line>
+              </svg>
+            </div>
+            <h3 class="service-title">API Development</h3>
+            <p class="service-description">
+              Building secure, scalable, and documented RESTful and GraphQL backend APIs. Connecting microservices, handling data transforms, and real-time streams.
+            </p>
+            <ul class="service-features">
+              <li>High-throughput Node.js &amp; Python APIs</li>
+              <li>JWT / OAuth authentication &amp; RBAC</li>
+              <li>Interactive Swagger / OpenAPI documentation</li>
+            </ul>
+          </div>
+
+          <!-- Service 6: Performance Optimization -->
+          <div class="service-card glassmorphism-card" data-tilt>
+            <div class="service-card-number">06</div>
+            <div class="service-icon-box">
+              <svg class="service-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+              </svg>
+            </div>
+            <h3 class="service-title">Performance Optimization</h3>
+            <p class="service-description">
+              Supercharging slow applications to achieve perfect Lighthouse scores, sub-second initial loads, optimized database queries, and CDN caching.
+            </p>
+            <ul class="service-features">
+              <li>Core Web Vitals tuning &amp; asset minification</li>
+              <li>Database indexing &amp; Redis caching</li>
+              <li>Bundle analysis &amp; lazy loading execution</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== PROJECTS / WORK SECTION ==================== -->
+    <section class="section work-section" id="work">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-badge">PORTFOLIO</div>
+          <h2 class="section-title">Featured <span class="gradient-text">Work &amp; Innovations</span></h2>
+          <p class="section-subtitle">A curated preview of flagship projects engineered with cutting-edge technologies.</p>
+        </div>
+
+        <!-- Coming Soon Announcement Banner -->
+        <div class="announcement-banner reveal">
+          <div class="announcement-pulse">
+            <span class="pulse-dot"></span>
+            <span class="pulse-ring"></span>
+          </div>
+          <div class="announcement-content">
+            <span class="announcement-tag">IN ACTIVE DEVELOPMENT</span>
+            <p class="announcement-text">
+              Projects coming soon — currently building something amazing! Three flagship applications are scheduled for public release. Inspect previews below.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Placeholder Project Cards -->
+        <div class="projects-grid reveal">
+          <!-- Project 1 -->
+          <div class="project-card glassmorphism-card">
+            <div class="project-preview preview-gradient-1">
+              <div class="preview-overlay">
+                <div class="preview-badge">SaaS Platform</div>
+                <div class="mock-browser-bar">
+                  <span class="mock-dot red"></span>
+                  <span class="mock-dot yellow"></span>
+                  <span class="mock-dot green"></span>
+                  <span class="mock-url">app.novacloud.io</span>
+                </div>
+                <!-- Abstract UI Wireframe Graphics -->
+                <div class="mock-ui">
+                  <div class="mock-ui-sidebar"></div>
+                  <div class="mock-ui-body">
+                    <div class="mock-ui-row header"></div>
+                    <div class="mock-ui-grid">
+                      <div class="mock-ui-stat"></div>
+                      <div class="mock-ui-stat"></div>
+                      <div class="mock-ui-chart"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-category">Cloud SaaS</span>
+                <span class="project-status">Release: Q1 2025</span>
+              </div>
+              <h3 class="project-title">NovaCloud — Multi-Cloud SaaS Analytics</h3>
+              <p class="project-description">
+                An all-in-one telemetry and cloud spending monitor that analyzes AWS and GCP usage, providing automated cost optimization insights and anomaly alerts.
+              </p>
+
+              <div class="project-tags">
+                <span class="project-tag">Next.js 14</span>
+                <span class="project-tag">TypeScript</span>
+                <span class="project-tag">Tailwind</span>
+                <span class="project-tag">Go API</span>
+                <span class="project-tag">PostgreSQL</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-sm btn-disabled" data-tooltip="🚀 Launching Soon — Stay Tuned!">
+                  <span>View Project</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+                <button class="btn btn-sm btn-disabled" data-tooltip="🔒 Repo will be public at launch">
+                  <span>GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card glassmorphism-card">
+            <div class="project-preview preview-gradient-2">
+              <div class="preview-overlay">
+                <div class="preview-badge">Mobile App</div>
+                <div class="mock-phone">
+                  <div class="mock-phone-notch"></div>
+                  <div class="mock-phone-screen">
+                    <div class="mock-phone-card"></div>
+                    <div class="mock-phone-list">
+                      <span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-category">Fintech Mobile</span>
+                <span class="project-status">Release: Q1 2025</span>
+              </div>
+              <h3 class="project-title">PulsePay — Global Peer-to-Peer Wallet</h3>
+              <p class="project-description">
+                A seamless cross-platform mobile wallet supporting instant multi-currency transfers, split bills, NFC tap payments, and biometric encryption.
+              </p>
+
+              <div class="project-tags">
+                <span class="project-tag">React Native</span>
+                <span class="project-tag">Expo</span>
+                <span class="project-tag">Node.js</span>
+                <span class="project-tag">Stripe</span>
+                <span class="project-tag">Redis</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-sm btn-disabled" data-tooltip="🚀 Launching Soon — Stay Tuned!">
+                  <span>View Project</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+                <button class="btn btn-sm btn-disabled" data-tooltip="🔒 Repo will be public at launch">
+                  <span>GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card glassmorphism-card">
+            <div class="project-preview preview-gradient-3">
+              <div class="preview-overlay">
+                <div class="preview-badge">AI Automation</div>
+                <div class="mock-flow-diagram">
+                  <div class="mock-node node-a">Trigger</div>
+                  <div class="mock-connector"></div>
+                  <div class="mock-node node-b">AI Transform</div>
+                  <div class="mock-connector"></div>
+                  <div class="mock-node node-c">Webhook</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-body">
+              <div class="project-meta">
+                <span class="project-category">AI &amp; Workflows</span>
+                <span class="project-status">Release: Q2 2025</span>
+              </div>
+              <h3 class="project-title">FlowForge — Visual Automation Engine</h3>
+              <p class="project-description">
+                A drag-and-drop workflow canvas integrating generative AI nodes, webhooks, database triggers, and scheduled task pipelines for engineering teams.
+              </p>
+
+              <div class="project-tags">
+                <span class="project-tag">Python</span>
+                <span class="project-tag">FastAPI</span>
+                <span class="project-tag">React Flow</span>
+                <span class="project-tag">Docker</span>
+                <span class="project-tag">Celery</span>
+              </div>
+
+              <div class="project-actions">
+                <button class="btn btn-sm btn-disabled" data-tooltip="🚀 Launching Soon — Stay Tuned!">
+                  <span>View Project</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </button>
+                <button class="btn btn-sm btn-disabled" data-tooltip="🔒 Repo will be public at launch">
+                  <span>GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== TESTIMONIALS SECTION ==================== -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-badge">ENDORSEMENTS</div>
+          <h2 class="section-title">Client <span class="gradient-text">Testimonials</span></h2>
+          <p class="section-subtitle">What founders, collaborators, and product leaders say about working with Gaurav.</p>
+        </div>
+
+        <!-- Testimonial Cards Grid -->
+        <div class="testimonials-grid reveal">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card glassmorphism-card">
+            <div class="testimonial-rating">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              "Gaurav transformed our SaaS concept into a scalable reality within weeks. His attention to detail in micro-interactions, responsive design, and robust API stability is world-class."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-grad-1">RK</div>
+              <div class="author-info">
+                <span class="author-name">Rohan K.</span>
+                <span class="author-title">Founder, TechVentures Studio</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card glassmorphism-card">
+            <div class="testimonial-rating">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              "Exceptional engineering talent! Gaurav's proficiency in React, TypeScript, and modern APIs gave our platform a 4x performance boost. He delivers clean, maintainable code every single sprint."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-grad-2">AS</div>
+              <div class="author-info">
+                <span class="author-name">Aarav Sharma</span>
+                <span class="author-title">Head of Product, Apex Digital</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card glassmorphism-card">
+            <div class="testimonial-rating">
+              ★★★★★
+            </div>
+            <p class="testimonial-quote">
+              "A rare breed of engineer who understands both pixel-perfect UI aesthetics and complex backend architectures. Communication was crystal clear from kickoff through deployment."
+            </p>
+            <div class="testimonial-author">
+              <div class="author-avatar avatar-grad-3">MP</div>
+              <div class="author-info">
+                <span class="author-name">Maya Patel</span>
+                <span class="author-title">Co-Founder, CloudPulse Inc.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-badge">GET IN TOUCH</div>
+          <h2 class="section-title">Let's Build Something <span class="gradient-text">Extraordinary</span></h2>
+          <p class="section-subtitle">Have a project, a SaaS idea, or an engineering role in mind? Drop a message and let's collaborate.</p>
+        </div>
+
+        <div class="contact-wrapper reveal">
+          <!-- Left Column: Contact Information -->
+          <div class="contact-info-col">
+            <div class="contact-info-card glassmorphism-card">
+              <h3 class="info-card-title">Contact Information</h3>
+              <p class="info-card-desc">
+                Feel free to reach out directly via email, message on social platforms, or submit the contact inquiry form.
+              </p>
+
+              <!-- Info Items List -->
+              <div class="info-items-list">
+                <div class="info-item">
+                  <div class="info-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                      <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                  </div>
+                  <div class="info-details">
+                    <span class="info-label">Email Me</span>
+                    <div class="email-copy-wrap">
+                      <a href="mailto:codebroker2001@gmail.com" class="info-value" id="emailText">codebroker2001@gmail.com</a>
+                      <button class="copy-email-btn" id="copyEmailBtn" aria-label="Copy Email to clipboard" title="Copy email">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                        </svg>
+                        <span class="copy-tooltip" id="copyTooltip">Copy</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                      <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                  </div>
+                  <div class="info-details">
+                    <span class="info-label">Location</span>
+                    <span class="info-value">India (Available Worldwide &amp; Remote)</span>
+                  </div>
+                </div>
+
+                <div class="info-item">
+                  <div class="info-icon-box">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                  </div>
+                  <div class="info-details">
+                    <span class="info-label">Working Hours</span>
+                    <span class="info-value">Mon – Fri / Flexible across US &amp; EU timezones</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Availability Status Card -->
+              <div class="availability-card">
+                <span class="status-indicator"></span>
+                <div class="availability-text">
+                  <strong>Current Status: Accepting New Projects</strong>
+                  <p>Available for freelance contracts, SaaS consulting, and full-time remote engineering positions.</p>
+                </div>
+              </div>
+
+              <!-- Social Links Box -->
+              <div class="social-connect-box">
+                <span class="connect-label">Find me online:</span>
+                <div class="social-icons-row">
+                  <a href="https://github.com/gaurav4047" class="social-btn" aria-label="GitHub" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                    </svg>
+                  </a>
+                  <a href="https://www.linkedin.com/in/gaurav-gavali-57470233a" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                    </svg>
+                  </a>
+                  <a href="https://x.com/GauravGavali07" class="social-btn" aria-label="Twitter / X" target="_blank" rel="noopener">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                    </svg>
+                  </a>
+                  <a href="#" class="social-btn discord-btn" aria-label="Discord: code_catalyst.07" title="Discord: code_catalyst.07" id="discordBtn" data-username="code_catalyst.07">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+                    </svg>
+                  </a>
+                </div>
+                <p class="discord-username-hint">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:middle;margin-right:5px;opacity:0.7"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                  Discord: <strong style="color:var(--accent-cyan)">code_catalyst.07</strong> <span style="font-size:0.75rem;opacity:0.6">(click icon to copy)</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Form -->
+          <div class="contact-form-col">
+            <div class="contact-form-card glassmorphism-card">
+              <h3 class="form-title">Send a Message</h3>
+              <p class="form-desc">I typically respond within 24 hours.</p>
+
+              <form id="contactForm" class="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="userName" class="form-label">Your Name <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                      <input type="text" id="userName" name="name" class="form-input" placeholder="e.g. John Doe" required>
+                      <span class="input-focus-border"></span>
+                    </div>
+                    <span class="field-error" id="nameError"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="userEmail" class="form-label">Your Email <span class="required">*</span></label>
+                    <div class="input-wrapper">
+                      <input type="email" id="userEmail" name="email" class="form-input" placeholder="john@example.com" required>
+                      <span class="input-focus-border"></span>
+                    </div>
+                    <span class="field-error" id="emailError"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="userSubject" class="form-label">Subject <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <input type="text" id="userSubject" name="subject" class="form-input" placeholder="Project Inquiry / Opportunity" required>
+                    <span class="input-focus-border"></span>
+                  </div>
+                  <span class="field-error" id="subjectError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="userMessage" class="form-label">Your Message <span class="required">*</span></label>
+                  <div class="input-wrapper">
+                    <textarea id="userMessage" name="message" class="form-input form-textarea" rows="5" placeholder="Tell me about your project, timeline, or requirements..." required></textarea>
+                    <span class="input-focus-border"></span>
+                  </div>
+                  <span class="field-error" id="messageError"></span>
+                </div>
+
+                <!-- Submit Button with Ripple Effect -->
+                <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                  <span class="btn-text">Send Message</span>
+                  <svg class="btn-icon send-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                  </svg>
+                  <div class="btn-spinner" id="btnSpinner"></div>
+                </button>
+              </form>
+
+              <!-- Success Alert Toast (Hidden by default) -->
+              <div class="form-feedback" id="formFeedback">
+                <div class="feedback-icon">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                  </svg>
+                </div>
+                <div class="feedback-text">
+                  <strong>Message Sent Successfully!</strong>
+                  <span>Thank you for reaching out. Gaurav will be in touch shortly.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo">
+            <span class="logo-box">GG</span>
+            <span class="logo-name">Gaurav<span class="logo-accent">.dev</span></span>
+          </a>
+          <p class="footer-tagline">
+            Building reliable, elegant software &amp; scalable SaaS architectures.
+          </p>
+        </div>
+
+        <div class="footer-nav">
+          <span class="footer-heading">Navigation</span>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-socials">
+          <span class="footer-heading">Connect</span>
+          <div class="footer-social-icons">
+            <a href="https://github.com/gaurav4047" class="social-icon-link" aria-label="GitHub" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/gaurav-gavali-57470233a" class="social-icon-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+              </svg>
+            </a>
+            <a href="https://x.com/GauravGavali07" class="social-icon-link" aria-label="Twitter / X" target="_blank" rel="noopener">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            <a href="#" class="social-icon-link" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright-text">
+          &copy; <span id="currentYear">2024</span> Gaurav Gavali. All rights reserved.
+        </p>
+        <p class="footer-credit">
+          Crafted with passion, TypeScript &amp; modern web standards.
+        </p>
+        <a href="#home" class="back-to-top" id="backToTop" aria-label="Back to Top">
+          <span>Top</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
