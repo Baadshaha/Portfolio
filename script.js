@@ -550,31 +550,6 @@
   }
 
   /* --------------------------------------------------------------------------
-     15b. DISCORD USERNAME COPY ON CLICK
-     -------------------------------------------------------------------------- */
-  const discordBtn = document.getElementById('discordBtn');
-  if (discordBtn) {
-    discordBtn.addEventListener('click', (e) => {
-      e.preventDefault();
-      const username = discordBtn.getAttribute('data-username');
-      navigator.clipboard.writeText(username).then(() => {
-        const original = discordBtn.title;
-        discordBtn.title = 'Copied: ' + username + ' ✓';
-        discordBtn.style.borderColor = 'var(--accent-cyan)';
-        discordBtn.style.color = 'var(--accent-cyan)';
-        setTimeout(() => {
-          discordBtn.title = original;
-          discordBtn.style.borderColor = '';
-          discordBtn.style.color = '';
-        }, 2500);
-      }).catch(() => {
-        // Fallback: show alert
-        alert('Discord: ' + username);
-      });
-    });
-  }
-
-  /* --------------------------------------------------------------------------
      15. CONTACT FORM VALIDATION & INTERACTIVE SUBMISSION
      -------------------------------------------------------------------------- */
   const contactForm = document.getElementById('contactForm');
